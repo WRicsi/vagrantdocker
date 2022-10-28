@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  web3:
+    build: ..
+    environment:
+      - DEMO_NAME=Web3
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://3.74.231.211:11201/chinook
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    restart: always
+    ports:
+      - "8083:8080"
